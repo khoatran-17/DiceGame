@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <title>Dice Game</title>
+  </head>
+ 
+  <body>
+    <div class="wrapper clearfix">
+      <div class="player-0-panel active">
+        <div class="score-field">
+          Winning Score:
+          <input type="text" id="high-score" value="100" />
+        </div>
+
+        <div class="player-name" id="name-0">Player 1</div>
+
+        <div class="player-score" id="score-0">-X-</div>
+
+        <div class="player-current-box">
+          <div class="player-current-label">Current</div>
+          <div class="player-current-score" id="current-0">0</div>
+        </div>
+      </div>
+
+      <div class="player-1-panel">
+        <div class="player-name" id="name-1">Player 2</div>
+
+        <div class="player-score" id="score-1">-Y-</div>
+
+        <div class="player-current-box">
+          <div class="player-current-label">Current</div>
+          <div class="player-current-score" id="current-1">0</div>
+        </div>
+      </div>
+
+      <button class="btn-rules"><i class="bx bx-question-mark"></i>Game Rules</button>
+
+      <button class="btn-new"><i class="bx bx-revision"></i>New game</button>
+      <button class="btn-roll"><i class="bx bxs-component"></i>Roll dice</button>
+      <button class="btn-hold"><i class="bx bx-exit"></i>Hold Dice</button>
+
+      <img src="dice-6.png" alt="Dice" class="dice" />
+      <img src="dice-1.png" alt="Dice" class="dice1" />
+    </div>
+
+    <div id="rules" class="rules" style="display:none;">
+      <i class="bx bxs-x-circle"></i>
+      <ul>
+        <li class="ruleBullets">
+          There are two players, <span class="highlight">Player 1</span> is on the left and
+          <span class="highlight">Player 2</span> is on the right. The current player is designated
+          by a red dot.
+        </li>
+        <li class="ruleBullets">
+          During each turn, the current player can <span class="highlight">ROLL</span> two dice as
+          many times as he/she wishes. The dice rolls are added to the player's round score.
+        </li>
+        <li class="ruleBullets">
+          <span class="highlight">HOWEVER</span>, if the player rolls a 1, his/her's round score is
+          deleted. The round is then passed to the next player.
+        </li>
+        <li class="ruleBullets">
+          <span class="highlight">ALSO</span>, if the player rolls two 6's, then his/her's global score is reset to 0.
+        </li>
+        <li class="ruleBullets">
+          The player can choose to <span class="highlight">HOLD</span> the round score, which then
+          gets added to the player's global score. The round is then passed to the next player.
+        </li>
+        <li class="ruleBullets">
+          The first player to reach the <span class="highlight">WINNING SCORE</span> is victorious.
+        </li>
+        <li class="ruleBullets">
+          The <span class="highlight">WINNING SCORE</span> can be changed on the top left.
+        </li>
+      </ul>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
